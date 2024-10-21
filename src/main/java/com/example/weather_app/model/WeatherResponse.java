@@ -11,7 +11,9 @@ public class WeatherResponse {
 
     private List<Weather> weather;
     private Main main;
-    private Wind wine;
+    private Wind wind;
+
+
 
     @Data
     public static  class  Sys{
@@ -31,10 +33,16 @@ public class WeatherResponse {
         private int humidity;
 
     }
-    @Data
+
     public static class Wind{
         private double speed;
 
+        public double getSpeed() {
+            return speed;
+        }
 
+        public void setSpeed(double speed) {
+            this.speed = speed;
+        }
     }
 }
