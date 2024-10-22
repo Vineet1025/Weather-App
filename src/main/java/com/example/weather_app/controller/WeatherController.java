@@ -82,7 +82,8 @@ public class WeatherController {
     public String viewHistoricalData(@RequestParam("city") String city, Model model) {
         List<WeatherData> historicalData = weatherService.getHistoricalWeatherData(city);
         model.addAttribute("historicalData", historicalData);
-        return "historical_data"; // Return the name of your historical data view
+        model.addAttribute("city", city);
+        return "historical_data"; 
     }
 
     @PostMapping("/setAlert")
@@ -95,13 +96,13 @@ public class WeatherController {
         Alert alert = new Alert();
         alert.setEmail(email);
         alert.setTempThreshold(tempThreshold);
-        alert.setAlertType(alertType); // Store the alert type
+        alert.setAlertType(alertType); 
         alert.setCity(city);
 
-        // Save the alert to the database
+        
         alertRepository.save(alert);
 
         alertService.saveAlert(email, tempThreshold, alertType, city);
-        return "redirect:/weather?city=" + city;  // Redirect back to the weather page
+        return "redirect:/weather?city=" + city;  
     }
 }
