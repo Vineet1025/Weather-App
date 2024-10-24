@@ -23,6 +23,7 @@
 - [Deployment](#deployment)
 - [Usage](#eyes-usage)
 - [Contributing](#wave-contributing)
+- [License](#warning-license)
 - [Contact](#handshake-contact)
 - [Acknowledgements](#gem-acknowledgements)
 
@@ -188,6 +189,11 @@ The application has been successfully deployed on an AWS EC2 instance, allowing 
   <img src="https://contrib.rocks/image?repo=Louis3797/awesome-readme-template" />
 
 Contributions are welcome! Please feel free to submit issues or pull requests.
+
+<!-- License -->
+## :warning: License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/Vineet1025/Weather-App/blob/master/LICENSE.md) file for details.
 
 
 <!-- Contact -->
